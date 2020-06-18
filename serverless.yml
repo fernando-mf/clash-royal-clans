@@ -1,0 +1,28 @@
+service: clash-royale-clans
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    packager: 'yarn'
+    excludeFiles: src/**/*.test.{js,ts}
+    includeModules:
+      forceExclude:
+        - aws-sdk
+    keepOutputDirectory: true
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ca-central-1
+
+functions:
+  getClan:
+    handler: src/lambda/get-clan.handler
+    events:
+      - http:
+          method: get
+          path: clans/{clanId}

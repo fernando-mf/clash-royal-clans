@@ -1,0 +1,47 @@
+{
+  "remainingRequest": "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/node_modules/babel-loader/lib/index.js!/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/src/lambda/get-clan.ts",
+  "dependencies": [
+    {
+      "path": "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/src/lambda/get-clan.ts",
+      "mtime": 1592522670033
+    },
+    {
+      "path": "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/.babelrc",
+      "mtime": 1592520541262
+    },
+    {
+      "path": "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 1581793993611
+    },
+    {
+      "path": "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/node_modules/babel-loader/lib/index.js",
+      "mtime": 1585238046848
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    {
+      "type": "Buffer",
+      "data": "base64:ZXhwb3J0IGNvbnN0IGhhbmRsZXIgPSBhc3luYyBldmVudCA9PiAoewogIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsKICAgIGNyQXBpOiB0cnVlLAogICAgZXZlbnQKICB9KSwKICBzdGF0dXNDb2RlOiAyMDIKfSk7"
+    },
+    {
+      "version": 3,
+      "sources": [
+        "/Users/FMamani/Documents/node/serverless/clash-royale-clan-tool/src/lambda/get-clan.ts"
+      ],
+      "names": [
+        "handler",
+        "event",
+        "body",
+        "JSON",
+        "stringify",
+        "crApi",
+        "statusCode"
+      ],
+      "mappings": "AAEA,OAAO,MAAMA,OAAO,GAAG,MACrBC,KADqB,KAEe;AACpCC,EAAAA,IAAI,EAAEC,IAAI,CAACC,SAAL,CAAe;AAAEC,IAAAA,KAAK,EAAE,IAAT;AAAeJ,IAAAA;AAAf,GAAf,CAD8B;AAEpCK,EAAAA,UAAU,EAAE;AAFwB,CAFf,CAAhB",
+      "sourcesContent": [
+        "import { APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';\n\nexport const handler = async (\n  event: APIGatewayEvent,\n): Promise<APIGatewayProxyResult> => ({\n  body: JSON.stringify({ crApi: true, event }),\n  statusCode: 202,\n});\n"
+      ]
+    }
+  ]
+}
