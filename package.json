@@ -6,11 +6,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "cli": "ts-node src/CLI.ts",
     "compile": "tsc --noEmit",
     "deploy": "sls deploy --stage"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "commander": "^5.1.0",
+    "serialize-error": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

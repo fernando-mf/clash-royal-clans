@@ -21,8 +21,17 @@ provider:
 
 functions:
   getClan:
-    handler: src/lambda/get-clan.handler
+    handler: src/Lambda/GetClan.handler
     events:
       - http:
           method: get
           path: clans/{clanId}
+    environment:
+      CR_API_KEY: ${ssm:/CR_API_TOKEN}
+
+  getLambdaIP:
+    handler: src/Lambda/GetLambdaIP.handler
+    events:
+      - http:
+          method: get
+          path: ip
